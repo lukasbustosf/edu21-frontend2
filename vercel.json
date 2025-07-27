@@ -1,11 +1,5 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
-  "framework": "nextjs",
-  "outputDirectory": ".next",
-  "functions": {
-    "src/app/**/*.tsx": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "framework": "nextjs"
 } 
