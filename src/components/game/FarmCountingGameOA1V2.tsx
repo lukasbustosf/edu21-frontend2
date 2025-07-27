@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface FarmCountingGameOA1V2Props {
   quiz: any;

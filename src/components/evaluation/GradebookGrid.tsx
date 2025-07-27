@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface Student {
   user_id: string;

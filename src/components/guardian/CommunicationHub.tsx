@@ -19,7 +19,7 @@ import {
   EllipsisVerticalIcon,
   PaperClipIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '../ui/Button'
+import { Button } from '../ui/button'
 import toast from 'react-hot-toast'
 
 // ===============================================

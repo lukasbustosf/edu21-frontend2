@@ -16,7 +16,7 @@ import {
   Cog6ToothIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '../../../components/ui/Button'
+import { Button } from '../../../components/ui/button'
 import AuditTrail from '../../../components/security/AuditTrail'
 import MFASetup from '../../../components/security/MFASetup'
 import toast from 'react-hot-toast'

@@ -12,7 +12,7 @@ import {
   CalendarDaysIcon,
   AcademicCapIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '../ui/Button'
+import { Button } from '../ui/button'
 import TTSControls, { TTSButton } from '@/components/ui/tts-controls'
 import ttsService from '@/lib/ttsService'
 

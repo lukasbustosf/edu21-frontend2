@@ -11,7 +11,7 @@ import {
   ClockIcon,
   GiftIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '../ui/Button'
+import { Button } from '../ui/button'
 
 interface RevealStage {
   id: string
