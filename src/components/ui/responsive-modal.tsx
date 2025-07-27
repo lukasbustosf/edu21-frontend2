@@ -1,156 +1,43 @@
 'use client'
 
-import { Fragment, ReactNode, useEffect } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { cn } from '@/lib/utils'
+import React from 'react'
+import { Dialog } from './dialog'
 
 interface ResponsiveModalProps {
   isOpen: boolean
   onClose: () => void
-  title?: string
-  children: ReactNode
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full'
-  showCloseButton?: boolean
-  closeOnOverlayClick?: boolean
-  footer?: ReactNode
-  className?: string
-  mobileFullScreen?: boolean // Force full screen on mobile
-  preventScroll?: boolean
+  title: string
+  children: React.ReactNode
+  size?: 'sm' | 'md' | 'lg' | 'xl'
 }
 
-export function ResponsiveModal({
-  isOpen,
-  onClose,
-  title,
-  children,
-  size = 'md',
-  showCloseButton = true,
-  closeOnOverlayClick = true,
-  footer,
-  className,
-  mobileFullScreen = false,
-  preventScroll = true
+export function ResponsiveModal({ 
+  isOpen, 
+  onClose, 
+  title, 
+  children, 
+  size = 'md' 
 }: ResponsiveModalProps) {
-  
-  // Prevent body scroll when modal is open
-  useEffect(() => {
-    if (!preventScroll) return
-    
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-      // Prevent scroll on iOS
-      document.documentElement.style.position = 'fixed'
-      document.documentElement.style.width = '100%'
-    } else {
-      document.body.style.overflow = ''
-      document.documentElement.style.position = ''
-      document.documentElement.style.width = ''
-    }
-    
-    return () => {
-      document.body.style.overflow = ''
-      document.documentElement.style.position = ''
-      document.documentElement.style.width = ''
-    }
-  }, [isOpen, preventScroll])
-
-  const getSizeClasses = () => {
-    if (mobileFullScreen) {
-      return 'w-full h-full sm:w-auto sm:h-auto sm:max-w-lg sm:max-h-[90vh] md:max-w-xl lg:max-w-2xl xl:max-w-4xl'
-    }
-
-    switch (size) {
-      case 'sm':
-        return 'modal-panel-sm'
-      case 'md':
-        return 'modal-panel'
-      case 'lg':
-        return 'modal-panel-lg'
-      case 'xl':
-      case 'full':
-        return 'modal-panel-full'
-      default:
-        return 'modal-panel'
-    }
-  }
-
-  const getContentClasses = () => {
-    if (mobileFullScreen) {
-      return 'h-full sm:h-auto flex flex-col sm:block'
-    }
-    return 'max-h-[90vh] sm:max-h-[80vh] flex flex-col'
+  const sizeClasses = {
+    sm: 'max-w-md',
+    md: 'max-w-lg',
+    lg: 'max-w-2xl',
+    xl: 'max-w-4xl'
   }
 
   return (
-    <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog 
-        as="div" 
-        className="modal-container" 
-        onClose={closeOnOverlayClick ? onClose : () => {}}
-      >
-        <Transition.Child
-          as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="modal-backdrop" />
-        </Transition.Child>
-
-        <div className="modal-wrapper safe-area-inset">
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enterTo="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
-            <Dialog.Panel className={cn(getSizeClasses(), className)}>
-              <div className={getContentClasses()}>
-                {/* Header */}
-                {(title || showCloseButton) && (
-                  <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 bg-white rounded-t-lg">
-                    {title && (
-                      <Dialog.Title as="h3" className="page-title text-mobile-lg sm:text-xl lg:text-2xl">
-                        {title}
-                      </Dialog.Title>
-                    )}
-                    {showCloseButton && (
-                      <button
-                        type="button"
-                        className="-m-2 p-2 text-gray-400 hover:text-gray-600 touch-manipulation rounded-full hover:bg-gray-100"
-                        onClick={onClose}
-                      >
-                        <span className="sr-only">Cerrar</span>
-                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                      </button>
-                    )}
-                  </div>
-                )}
-
-                {/* Content */}
-                <div className="flex-1 overflow-y-auto p-4 sm:p-6 bg-white">
-                  {children}
-                </div>
-
-                {/* Footer */}
-                {footer && (
-                  <div className="p-4 sm:p-6 border-t border-gray-200 bg-gray-50 sm:bg-white rounded-b-lg mobile-sticky-bottom mobile-safe-bottom">
-                    {footer}
-                  </div>
-                )}
-              </div>
-            </Dialog.Panel>
-          </Transition.Child>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <div className={`w-full ${sizeClasses[size]} mx-auto`}>
+        <div className="bg-white rounded-lg shadow-xl">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-medium text-gray-900">{title}</h2>
+          </div>
+          <div className="px-6 py-4">
+            {children}
+          </div>
         </div>
-      </Dialog>
-    </Transition.Root>
+      </div>
+    </Dialog>
   )
 }
 
@@ -198,7 +85,7 @@ export function ConfirmModal({
             type="button"
             onClick={onConfirm}
             disabled={loading}
-            className={cn(buttonClass, "btn-responsive disabled:opacity-50")}
+            className={buttonClass}
           >
             {loading ? "Procesando..." : confirmText}
           </button>
@@ -225,7 +112,7 @@ export function FormModal({
   isOpen: boolean
   onClose: () => void
   title: string
-  children: ReactNode
+  children: React.ReactNode
   onSubmit: () => void
   submitText?: string
   cancelText?: string
@@ -278,7 +165,7 @@ export function InfoModal({
   isOpen: boolean
   onClose: () => void
   title: string
-  children: ReactNode
+  children: React.ReactNode
   closeText?: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
 }) {
