@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '@/lib/api';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { QuestionMarkCircleIcon, PlusCircleIcon, MinusCircleIcon } from '@heroicons/react/24/outline';
 
 interface QuestionBankSelectorProps {

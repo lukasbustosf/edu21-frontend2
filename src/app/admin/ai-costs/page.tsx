@@ -3,10 +3,10 @@
 import { useState } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
-import { StatsGrid } from '@/components/ui/StatsGrid'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
-import { ResponsiveModal } from '@/components/ui/ResponsiveModal'
+import { Button } from '@/components/ui/button'
+import { StatsGrid } from '@/components/ui/stats-grid'
+import { ResponsiveTable } from '@/components/ui/responsive-table'
+import { ResponsiveModal } from '@/components/ui/responsive-modal'
 import { 
   CurrencyDollarIcon,
   ChartBarIcon,

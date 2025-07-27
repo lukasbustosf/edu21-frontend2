@@ -13,7 +13,7 @@ import {
   BuildingOfficeIcon,
   UsersIcon
 } from '@heroicons/react/24/outline';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 export default function AdminReportsPage() {
   const [activeTab, setActiveTab] = useState<'lab' | 'games'>('lab');

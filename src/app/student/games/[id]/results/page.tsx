@@ -3,8 +3,8 @@
 import { useState, useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircleIcon, XCircleIcon, LightBulbIcon, ArrowPathIcon, ArrowRightIcon, DocumentArrowDownIcon } from '@heroicons/react/24/solid';
 import Confetti from 'react-confetti';
 import { useAuth } from '@/store/auth';

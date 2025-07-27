@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import PedagogicalSheet from './PedagogicalSheet'; // Import the new component
 import GuideStepsMarkdown from './GuideStepsMarkdown';
 

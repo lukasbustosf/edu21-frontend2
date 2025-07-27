@@ -3,7 +3,7 @@
 import { useState, Fragment } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { Dialog, Transition } from '@headlessui/react'
 import { 
   ChartBarIcon,

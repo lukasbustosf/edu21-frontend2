@@ -15,7 +15,7 @@ import {
   EyeIcon,
   PhoneIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 
 export default function BienestarDashboard() {
   const { user, fullName } = useAuth()

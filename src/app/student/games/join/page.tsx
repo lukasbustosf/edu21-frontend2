@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { ChevronRightIcon, UserGroupIcon, PlayIcon } from '@heroicons/react/24/outline'
 
 function JoinGameContent() {

@@ -16,7 +16,7 @@ import {
   StopIcon,
   PlusIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import toast from 'react-hot-toast'
 

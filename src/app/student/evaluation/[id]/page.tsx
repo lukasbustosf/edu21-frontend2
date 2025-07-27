@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/store/auth'
 import { api } from '@/lib/api'
 import { useQuery } from '@tanstack/react-query'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { ExclamationTriangleIcon, ClockIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 

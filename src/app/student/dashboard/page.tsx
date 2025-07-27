@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
-import { StatsGrid } from '@/components/ui/StatsGrid'
+import { Button } from '@/components/ui/button'
+import { StatsGrid } from '@/components/ui/stats-grid'
 import { 
   PlayIcon, 
   AcademicCapIcon,

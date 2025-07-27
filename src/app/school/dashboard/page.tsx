@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
+import { ResponsiveTable } from '@/components/ui/responsive-table'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { 
@@ -19,7 +19,7 @@ import {
   PlusIcon,
   EyeIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 
 export default function SchoolDashboard() {
   const { user, fullName } = useAuth()

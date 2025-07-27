@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/store/auth'
 import { PlusIcon, BookOpenIcon } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
-import { ConfirmationModal } from '@/components/ui/ConfirmationModal' // Importar el modal
+import { ResponsiveTable } from '@/components/ui/responsive-table'
+import { ConfirmationModal } from '@/components/ui/confirmation-modal' // Importar el modal
 
 export default function AdminLabActivitiesPage() {
   const router = useRouter()

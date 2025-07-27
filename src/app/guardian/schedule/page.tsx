@@ -13,7 +13,7 @@ import {
   DocumentTextIcon,
   ExclamationCircleIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import toast from 'react-hot-toast'
 
 export default function SchedulePage() {

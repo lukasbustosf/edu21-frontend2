@@ -9,7 +9,7 @@ import GuideStepsMarkdown from '@/components/lab/GuideStepsMarkdown';
 import MaterialsList from '@/components/lab/MaterialsList';
 import EmbeddedVideo from '@/components/lab/EmbeddedVideo';
 import AssessmentChecklist from '@/components/lab/AssessmentChecklist';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 // Mock Data for the activity
 const activityData = {

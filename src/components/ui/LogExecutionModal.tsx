@@ -2,10 +2,10 @@
 
 import { useState, useEffect, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { Button } from '@/components/ui/Button'
-import { Input } from '@/components/ui/Input'
-import { Textarea } from '@/components/ui/Textarea'
-import { Select } from '@/components/ui/Select'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Select } from '@/components/ui/select'
 
 interface LogExecutionModalProps {
   open: boolean;

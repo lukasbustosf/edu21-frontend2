@@ -57,7 +57,7 @@ import {
   BeakerIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline'
-import NotificationBell from '@/components/ui/NotificationBell'
+import NotificationBell from '@/components/ui/notification-bell'
 
 interface NavigationItem {
   name: string

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/outline'
 import { cn } from '@/lib/utils'
-import TTSControls from '@/components/ui/TTSControls'
+import TTSControls from '@/components/ui/tts-controls'
 import ttsService from '@/lib/ttsService'
 import type { GameComponentProps } from '@/types'
 

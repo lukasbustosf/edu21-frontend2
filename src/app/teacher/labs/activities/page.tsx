@@ -3,12 +3,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { BookOpenIcon, PlusIcon, MagnifyingGlassIcon, FunnelIcon, ExclamationTriangleIcon, ArrowPathIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useAuth } from '@/store/auth';
-import { ConfirmationModal } from '@/components/ui/ConfirmationModal';
+import { ConfirmationModal } from '@/components/ui/confirmation-modal';
 
 const subjects = ['Ciencias Naturales', 'Matemáticas', 'Lenguaje', 'Historia', 'Artes'];
 const gradeLevels = ['Pre-Kínder', 'Kínder', '1º Básico', '2º Básico', '3º Básico', '4º Básico'];

@@ -3,8 +3,8 @@
 import { useState, Fragment } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
-import { Button } from '@/components/ui/Button'
+import { ResponsiveTable } from '@/components/ui/responsive-table'
+import { Button } from '@/components/ui/button'
 import { Dialog, Transition } from '@headlessui/react'
 import { 
   HeartIcon,

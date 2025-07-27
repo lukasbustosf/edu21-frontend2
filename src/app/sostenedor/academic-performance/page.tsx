@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 
 import { 
   AcademicCapIcon,
@@ -21,7 +21,7 @@ import {
   CalendarIcon,
   DocumentArrowDownIcon
 } from '@heroicons/react/24/outline'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
+import { ResponsiveTable } from '@/components/ui/responsive-table'
 
 export default function SostenedorAcademicPerformance() {
   const { user } = useAuth()

@@ -16,7 +16,7 @@ import {
   TrophyIcon,
   ClockIcon
 } from '@heroicons/react/24/outline';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 export default function SchoolReportsPage() {
   const [activeTab, setActiveTab] = useState<'lab' | 'games' | 'academic'>('lab');

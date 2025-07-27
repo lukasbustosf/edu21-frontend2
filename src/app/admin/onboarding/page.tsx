@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { ResponsiveTable } from '@/components/ui/ResponsiveTable'
-import { ResponsiveModal, FormModal } from '@/components/ui/ResponsiveModal'
-import { Button } from '@/components/ui/Button'
+import { ResponsiveTable } from '@/components/ui/responsive-table'
+import { ResponsiveModal, FormModal } from '@/components/ui/responsive-modal'
+import { Button } from '@/components/ui/button'
 import { 
   PlusIcon, 
   EyeIcon, 

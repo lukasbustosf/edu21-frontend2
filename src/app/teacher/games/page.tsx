@@ -24,7 +24,7 @@ import {
   PuzzlePieceIcon,
   AcademicCapIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { formatDate, getGameFormatDisplayName } from '@/lib/utils'
 import type { GameSession } from '@/types'

@@ -17,7 +17,7 @@ import {
   ExclamationTriangleIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { formatTimeAgo, getGameFormatDisplayName } from '@/lib/utils'
 import type { GameParticipant } from '@/types'

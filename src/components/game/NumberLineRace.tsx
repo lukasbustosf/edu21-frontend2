@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/outline'
 import { useGameWebSocket } from '@/lib/websocket'
 import { cn } from '@/lib/utils'
-import TTSControls, { TTSButton } from '@/components/ui/TTSControls'
+import TTSControls, { TTSButton } from '@/components/ui/tts-controls'
 import ttsService from '@/lib/ttsService'
 import type { GameComponentProps } from '@/types'
 

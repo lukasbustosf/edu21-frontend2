@@ -18,7 +18,7 @@ import {
   BanknotesIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 export default function SostenedorReportsPage() {
   const [activeTab, setActiveTab] = useState<'lab' | 'games' | 'network'>('lab');

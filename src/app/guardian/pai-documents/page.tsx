@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/store/auth'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
-import { ResponsiveModal } from '@/components/ui/ResponsiveModal'
+import { Button } from '@/components/ui/button'
+import { ResponsiveModal } from '@/components/ui/responsive-modal'
 import { 
   DocumentTextIcon,
   DocumentArrowDownIcon,

@@ -7,7 +7,7 @@ import {
   ClipboardDocumentCheckIcon,
   EyeIcon
 } from '@heroicons/react/24/outline'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { formatDate, formatTimeAgo, cn } from '@/lib/utils'
 import type { Class } from '@/types'
 

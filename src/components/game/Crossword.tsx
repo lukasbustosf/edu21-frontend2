@@ -16,7 +16,7 @@ import {
   StarIcon
 } from '@heroicons/react/24/outline'
 import { Button } from '../ui/Button'
-import TTSControls, { TTSButton } from '@/components/ui/TTSControls'
+import TTSControls, { TTSButton } from '@/components/ui/tts-controls'
 import ttsService from '@/lib/ttsService'
 import { cn } from '@/lib/utils'
 

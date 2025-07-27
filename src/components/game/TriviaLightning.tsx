@@ -7,8 +7,8 @@ import { PlayIcon, PauseIcon, SpeakerWaveIcon, SpeakerXMarkIcon, ClockIcon, Trop
 import { useAuth } from '@/store/auth'
 import { useGameWebSocket } from '@/lib/websocket'
 import { announceToScreenReader, cn } from '@/lib/utils'
-import { Button } from '@/components/ui/Button'
-import TTSControls, { TTSButton, useTTS } from '@/components/ui/TTSControls'
+import { Button } from '@/components/ui/button'
+import TTSControls, { TTSButton, useTTS } from '@/components/ui/tts-controls'
 import { speakQuestion, speakFeedback } from '@/lib/ttsService'
 import type { GameSession, Question, GameParticipant, GameComponentProps } from '@/types'
 

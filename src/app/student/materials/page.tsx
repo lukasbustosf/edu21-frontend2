@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import toast from 'react-hot-toast'
 import {
   MagnifyingGlassIcon,

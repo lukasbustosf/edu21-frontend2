@@ -1,7 +1,7 @@
 'use client'
 
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 
 interface Props {

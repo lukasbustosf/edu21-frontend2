@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { PageHeader } from '@/components/layout/PageHeader'
-import { Button } from '@/components/ui/Button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { PuzzlePieceIcon, BookOpenIcon, BeakerIcon, PencilIcon, CheckBadgeIcon, SparklesIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 

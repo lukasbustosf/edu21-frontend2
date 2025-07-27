@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import toast from 'react-hot-toast'
 import {
   ShieldCheckIcon,
