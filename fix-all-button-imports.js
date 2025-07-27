@@ -17,51 +17,29 @@ function processDirectory(dir) {
   });
 }
 
-// Función para corregir importaciones de Button
+// Función para arreglar imports de Button
 function fixButtonImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Patrones de importación incorrectos
-    const patterns = [
-      {
-        from: "from '../ui/Button'",
-        to: "from '../ui/button'"
-      },
-      {
-        from: "from '../ui/Button';",
-        to: "from '../ui/button';"
-      },
-      {
-        from: "from '@/components/ui/Button'",
-        to: "from '@/components/ui/button'"
-      },
-      {
-        from: "from '@/components/ui/Button';",
-        to: "from '@/components/ui/button';"
-      },
-      {
-        from: "from './Button'",
-        to: "from './button'"
-      },
-      {
-        from: "from './Button';",
-        to: "from './button';"
-      }
-    ];
+    // Arreglar imports relativos con mayúscula
+    const relativeImportRegex = /import\s+\{\s*Button\s*\}\s+from\s+['"]\.\.\/ui\/Button['"]/g;
+    if (relativeImportRegex.test(content)) {
+      content = content.replace(relativeImportRegex, "import { Button } from '../ui/button'");
+      modified = true;
+    }
     
-    // Aplicar todas las correcciones
-    patterns.forEach(pattern => {
-      if (content.includes(pattern.from)) {
-        content = content.replace(new RegExp(pattern.from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), pattern.to);
-        modified = true;
-        console.log(`✅ Corregido en ${filePath}: ${pattern.from} → ${pattern.to}`);
-      }
-    });
+    // Arreglar imports relativos con mayúscula (un solo nivel)
+    const singleRelativeImportRegex = /import\s+\{\s*Button\s*\}\s+from\s+['"]\.\/ui\/Button['"]/g;
+    if (singleRelativeImportRegex.test(content)) {
+      content = content.replace(singleRelativeImportRegex, "import { Button } from './ui/button'");
+      modified = true;
+    }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Arreglado: ${filePath}`);
     }
   } catch (error) {
     console.error(`❌ Error procesando ${filePath}:`, error.message);
@@ -70,6 +48,6 @@ function fixButtonImports(filePath) {
 
 // Procesar el directorio src
 const srcDir = path.join(__dirname, 'src');
-console.log('🔍 Buscando archivos con importaciones incorrectas de Button...');
+console.log('🔧 Arreglando imports de Button...');
 processDirectory(srcDir);
-console.log('✅ Proceso completado!'); 
+console.log('✅ ¡Proceso completado!'); 
