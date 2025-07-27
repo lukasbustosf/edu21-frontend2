@@ -1,13 +1,11 @@
-﻿// TEMPORARILY DISABLED - WILL BE ENABLED IN FUTURE VERSION
-export default function AuditLogsPage() {
+// TEMPORARILY DISABLED - WILL BE ENABLED IN FUTURE VERSION
+import React from 'react';
+
+export default function UnderDevelopmentPage() {
   return (
-    <div className="p-8 text-center">
-      <h1 className="text-2xl font-bold text-gray-600 mb-4">
-        🚧 Página en Desarrollo
-      </h1>
-      <p className="text-gray-500">
-        Esta funcionalidad estará disponible en una versión futura.
-      </p>
+    <div style={{ padding: '20px', textAlign: 'center', fontSize: '24px', color: '#555' }}>
+      <h1>Página en Desarrollo 🚧</h1>
+      <p>Esta funcionalidad estará disponible en una futura actualización.</p>
     </div>
-  )
+  );
 }
