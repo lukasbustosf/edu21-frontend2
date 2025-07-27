@@ -1,7 +1,4 @@
-// TEMPORARILY DISABLED - WILL BE ENABLED IN FUTURE VERSION
-// src/app/admin/access-policies/page.tsx
-/*
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useAuth } from '@/store'
@@ -369,4 +366,3 @@ export default function AdminaccesspoliciesPage() {
     </DashboardLayout>
   )
 }
-*/
